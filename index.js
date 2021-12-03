@@ -7,7 +7,7 @@
 exports.saveOrder = (event, context) => {
   const {Storage} = require('@google-cloud/storage');
   const storage = new Storage()
-  const bucket = storage.bucket('accessnetworks-woocommerce-orders')
+  const bucket = storage.bucket('BUCKET NAME HERE')
 
   // Parse PubSub message.
   const pubsubMessage = JSON.parse(Buffer.from(event.data, 'base64').toString());
